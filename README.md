@@ -1,7 +1,7 @@
 # Easyheaps 
 
 Easyheaps asks you to provide only the comparison function for the items you
-want to put in the heap. It exposes only Push and Pop. This is sufficient for
+want to put in the heap. It exposes only Push, Pop and Len. This is sufficient for
 everyday coding. `container/heap` packge allows you to do much more so you can
 switch to that if needed. 
 
