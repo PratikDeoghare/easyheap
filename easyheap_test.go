@@ -22,11 +22,7 @@ func TestName(t *testing.T) {
 		&lexfoo{"is"},
 		&lexfoo{"the"},
 		&lexfoo{"day"},
-		&lexfoo{"dayz"},
 	)
-	h.Push(&lexfoo{"hello"})
-	h.Push(&lexfoo{"he"})
-	h.Push(&lexfoo{"hello1111"})
 
 	for h.Len() > 0 {
 		fmt.Println(h.Pop())
@@ -41,12 +37,29 @@ func TestName(t *testing.T) {
 		&foo{"the"},
 		&foo{"day"},
 	)
-	hh.Push(&foo{"hello"})
-	hh.Push(&foo{"he"})
-	hh.Push(&foo{"hello1111"})
 
 	for hh.Len() > 0 {
 		fmt.Println(hh.Pop())
 	}
+}
 
+func ExampleReverse() {
+	h := easyheap.NewHeap[*lexfoo](
+		func(a, b *lexfoo) bool {
+			return a.name < b.name
+		},
+		&lexfoo{"today"},
+		&lexfoo{"is"},
+		&lexfoo{"the"},
+		&lexfoo{"day"},
+	)
+
+	for h.Len() > 0 {
+		fmt.Println(h.Pop().name)
+	}
+	// Output:
+	//day
+	//is
+	//the
+	//today
 }
