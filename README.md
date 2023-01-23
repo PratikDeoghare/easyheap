@@ -7,7 +7,15 @@ switch to that if needed.
 
 
 ``` 
+
+type foo struct {
+	name string
+}
+
 func ExampleReverse() {
+
+    type lexfoo foo
+	
 	h := easyheap.NewHeap[*lexfoo](
 		func(a, b *lexfoo) bool {
 			return a.name < b.name

@@ -11,9 +11,10 @@ type foo struct {
 	name string
 }
 
-type lexfoo foo
-
 func TestName(t *testing.T) {
+
+	type lexfoo foo
+
 	h := easyheap.NewHeap[*lexfoo](
 		func(a, b *lexfoo) bool {
 			return a.name < b.name
@@ -44,6 +45,9 @@ func TestName(t *testing.T) {
 }
 
 func ExampleReverse() {
+
+	type lexfoo foo
+
 	h := easyheap.NewHeap[*lexfoo](
 		func(a, b *lexfoo) bool {
 			return a.name < b.name
