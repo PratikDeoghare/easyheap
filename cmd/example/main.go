@@ -1,7 +1,3 @@
-# Easyheap
-[![Go](https://github.com/PratikDeoghare/easyheap/actions/workflows/go.yml/badge.svg)](https://github.com/PratikDeoghare/easyheap/actions/workflows/go.yml)
-
-```
 package main
 
 import (
@@ -47,20 +43,3 @@ func main() {
 	}
 
 }
-```
-
-
-
-
-This package exists because I don't fancy typing this all the time. 
-
-``` 
-	old := *h
-	n := len(old)
-	x := old[n-1]
-	*h = old[0 : n-1]
-	return x
-
-``` 
-
-
