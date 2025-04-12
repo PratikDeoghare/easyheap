@@ -1,4 +1,5 @@
 # Easyheap
+[![Go](https://github.com/PratikDeoghare/easyheap/actions/workflows/go.yml/badge.svg)](https://github.com/PratikDeoghare/easyheap/actions/workflows/go.yml)
 
 Easyheap asks you to provide only the comparison function for the items you
 want to put in the heap. It exposes only Push, Pop and Len. This is sufficient for
